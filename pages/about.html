@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - The Gallery Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-image: url("../images/header1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 74px;
+            width: 100%;
+        }
+
+        nav, footer {
+            background-color: #8B4513; 
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        nav ul, footer p {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 5px 10px; /* Padding for better hover effect */
+        }
+
+        nav ul li a:hover {
+            background-color: #D2B48C; /* Highlight color on hover */
+            color: #333; /* Text color change on hover */
+            border-radius: 5px; /* Rounded corners on hover */
+        }
+		
+        /* Main section style */
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Flexbox container for the sections */
+        .flex-container {
+			
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            gap: 20px; /* Space between the sections */
+        }
+
+        /* Flexbox item style */
+        .flex-container section {
+            flex: 1; /* Each section will take equal space */
+            min-width: 300px; /* Minimum width to ensure readability on small screens */
+            background-color: #FFF7E1;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Footer style */
+        footer {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.php">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="promotions.html">Promotions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.php">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="flex-container">
+            <section id="overview">
+                <h2><center>Our Story</center></h2>
+                <p>Welcome to The Gallery Café, where culinary art meets a vibrant atmosphere. Nestled in the heart of Colombo, our restaurant combines a passion for great food with a celebration of local art and culture. Established in 1995, we have been serving delightful dishes crafted from the finest ingredients.</p>
+                <p>What sets us apart is our commitment to showcasing local artists through our décor and exhibitions. The walls of The Gallery Café are adorned with paintings, sculptures, and photographs that rotate monthly, creating a dynamic space where art enthusiasts and food lovers converge.</p>
+            </section>
+
+            <section id="mission">
+                <h2><center>Our Mission</center></h2>
+                <p>At The Gallery Café, we strive to provide an exceptional dining experience that delights the senses and nourishes the soul. Our mission is to celebrate the rich flavors of Sri Lankan cuisine while offering a menu that caters to diverse tastes and preferences.</p>
+                <p>We are dedicated to sustainability and source our ingredients locally whenever possible. Our team of chefs continuously innovates, ensuring each dish not only tantalizes the taste buds but also tells a story of tradition and innovation.</p>
+            </section>
+
+            <section id="team">
+                <h2><center>Meet Our Team</center></h2>
+                <p>Behind every memorable meal is a dedicated team of professionals passionate about hospitality. From our experienced chefs who bring creativity to the kitchen to our friendly waitstaff who ensure every guest feels at home, The Gallery Café is driven by a commitment to excellence.</p>
+                <p>We invite you to join us on a culinary journey that celebrates art, culture, and community. Whether you're dining with us for a special occasion or simply stopping by for a quick bite, we promise an experience that will leave you inspired and satisfied.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Gallery Café. All rights reserved.</p>
+    </footer>
+</body>
+</html>

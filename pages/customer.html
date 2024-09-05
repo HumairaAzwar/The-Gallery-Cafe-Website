@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - The Gallery Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-image: url("../images/header1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 74px;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #8B4513; /* Wood-like color */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #D2B48C; /* Highlight color on hover */
+            color: #333;
+            border-radius: 5px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 20px;
+            min-height: calc(100vh - 144px - 40px); /* Adjust height to fit content */
+        }
+
+        footer {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: white;
+        }
+
+        #customer-functions {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .dashboard-section {
+            flex: 1;
+            background-color: #FFF7E1;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-width: 250px; /* Minimum width for smaller screens */
+            max-width: 30%; /* Max width to prevent overflow */
+        }
+
+        .dashboard-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .dashboard-section ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .dashboard-section ul li {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #D2B48C;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.php">View Menu</a></li>
+            <li><a href="reservation.php">Make Reservation</a></li>
+            <li><a href="preorders.php">Place Pre-Order</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="customer-functions">
+            <div class="dashboard-section">
+                <h3>My Reservations</h3>
+                <ul>
+                    <li>
+                        <strong>Reservation ID:</strong> 101<br>
+                        <strong>Date:</strong> 2024-07-30<br>
+                        <strong>Time:</strong> 7:00 PM<br>
+                        <button>View Details</button>
+                        <button>Cancel Reservation</button>
+                    </li>
+                    <li>
+                        <strong>Reservation ID:</strong> 102<br>
+                        <strong>Date:</strong> 2024-08-05<br>
+                        <strong>Time:</strong> 6:00 PM<br>
+                        <button>View Details</button>
+                        <button>Cancel Reservation</button>
+                    </li>
+                    <!-- Add more reservations here -->
+                </ul>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>My Pre-Orders</h3>
+                <ul>
+                    <li>
+                        <strong>Pre-Order ID:</strong> 201<br>
+                        <strong>Meal:</strong> Spaghetti Bolognese<br>
+                        <strong>Quantity:</strong> 2<br>
+                        <strong>Pickup Date:</strong> 2024-07-25<br>
+                        <button>View Details</button>
+                        <button>Cancel Pre-Order</button>
+                    </li>
+                    <li>
+                        <strong>Pre-Order ID:</strong> 202<br>
+                        <strong>Meal:</strong> Chicken Alfredo<br>
+                        <strong>Quantity:</strong> 1<br>
+                        <strong>Pickup Date:</strong> 2024-07-26<br>
+                        <button>View Details</button>
+                        <button>Cancel Pre-Order</button>
+                    </li>
+                    <!-- Add more pre-orders here -->
+                </ul>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>Account Details</h3>
+                <p><strong>Username:</strong> john_doe</p>
+                <p><strong>Email:</strong> john@example.com</p>
+                <button>Edit Details</button>
+                <button>Change Password</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Gallery Café. All rights reserved.</p>
+    </footer>
+</body>
+</html>

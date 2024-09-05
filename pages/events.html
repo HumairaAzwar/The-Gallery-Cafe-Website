@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - The Gallery Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        
+        header {
+            background-image: url("../images/header1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 74px;
+            width: 100%;
+        }
+
+        
+        nav, footer {
+            background-color: #8B4513; 
+            padding: 10px 0;
+            position: relative;
+            top: 0;
+            width: 100%;
+        }
+
+        nav ul, footer p {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 5px 10px; 
+        }
+
+        nav ul li a:hover {
+            background-color: #D2B48C; 
+            color: #333; 
+            border-radius: 5px; 
+        }
+
+        /* Main section style */
+        main {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Event details style */
+        .event {
+            margin-bottom: 20px;
+			background-color: #FFF7E1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 45%; /* Adjust width as needed */
+            display: inline-block; /* Ensure events are displayed inline */
+            vertical-align: top; /* Align events at the top */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            margin-right: 20px; /* Add space between events */
+        }
+
+        .event img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Adjust for smaller screens */
+        @media (max-width: 768px) {
+            .event {
+                width: 100%; /* Full width on smaller screens */
+                margin-right: 0; /* No margin between events */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.php">Menu</a></li>
+            <li><a href="promotions.html">Promotions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.php">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="upcoming-events">
+            <h2><center>Upcoming Events</center></h2>
+
+            <!-- Event 1 -->
+            <div class="event">
+                <center>
+                    <p><strong>Seasonal Menu Launch: "Spring Blossom Delights"</strong></p>
+                    <p>Date: <strong>July</strong> 2<sup>nd</sup>, 2024</p>
+                    <p><img src="../images/evt1.jpeg" width="221" height="93" alt=""/></p>
+                </center>
+                <center>
+                    <p>Join us at The Gallery Café as we unveil our latest culinary creations with the launch of our seasonal menu, "Spring Blossom Delights." Embrace the vibrant flavors and fresh ingredients of the season with dishes that celebrate nature's bounty.</p>
+                    <center>
+                        <strong>Featured Dish: Blossom Risotto with Spring Peas and Lemon Zest</strong>
+                    </center>
+                    <center>
+                        <p>Indulge in our signature Blossom Risotto, a delightful harmony of creamy Arborio rice infused with the essence of spring peas and a hint of zesty lemon. Each bite bursts with the crispness of seasonal produce, perfectly complemented by the richness of Parmesan cheese and a touch of fresh herbs.</p>
+                    </center>
+                </center>
+                <p>&nbsp;</p>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event">
+                <center>
+                    <p><strong>Wine Tasting Event: "Discover the Essence of Elegance"</strong></p>
+                    <p>Date: <strong>July</strong> 25<sup>th</sup>, 2024</p>
+                    <p><img src="../images/evnt2.jpeg" width="267" height="213" alt=""/></p>
+                </center>
+                <center>
+                    <p>Join us at The Gallery Café for an exquisite evening of wine tasting, where we invite you to explore the essence of elegance through a curated selection of fine wines. Whether you're a connoisseur or a curious enthusiast, this event promises to tantalize your senses and elevate your appreciation for the art of wine.</p>
+                    <p><strong>Featured Wines:</strong></p>
+                    <ul>
+                        <li>
+                            <p><strong>Chardonnay Blanc 2022</strong>: Immerse yourself in the vibrant notes of citrus and tropical fruits, accented by a subtle hint of oak. This elegant white wine offers a refreshing balance and a smooth finish.</p>
+                        </li>
+                        <li>
+                            <p><strong>Merlot Rouge 2019</strong>: Delight in the velvety texture and rich flavors of black cherries, plum, and hints of chocolate. This red wine captivates with its depth and complexity, leaving a lasting impression.</p>
+                        </li>
+                    </ul>
+                    <p></p>
+                </center>
+                <h3>&nbsp;</h3>
+            </div>
+
+            <!-- Add more events as needed -->
+        </section>
+
+        <section id="past-events">
+            <h2><center>Past Events</center></h2>
+
+            <!-- Past Event 1 -->
+            <div class="event">
+            <center><p><strong>Summer Grooves Music Festival</strong></p>
+            <p>Date: June 5th, 2024</p>
+            <p><img src="../images/evnt3.jpeg" width="275" height="183" alt=""/></p>
+            <p>Immerse yourself in the electrifying ambiance of The Gallery Café's Summer Grooves Music Festival, where music enthusiasts and artists alike come together for a weekend of rhythm, melody, and unforgettable performances. Nestled in the heart of our café's lush garden, this festival promises to be a celebration of diverse musical genres and vibrant creativity.</p></center>
+            <p><strong><center>Festival Highlights:</center></strong></p>
+            <ul>
+              
+                <center><p>Experience an eclectic lineup of bands and solo artists from around the globe, showcasing everything from soulful jazz and upbeat funk to indie rock and electronic beats. Each act is carefully curated to deliver an unforgettable auditory journey under the open sky.</p></center>
+            
+            </ul>
+            <h3>&nbsp;</h3>
+        </div>
+
+            <!-- Past Event 2 -->
+            <div class="event">
+                <center>
+                    <p><strong>Summer BBQ Extravaganza</strong></p>
+                    <p>Date: May 15th, 2024</p>
+                    <p><img src="../images/evnt4.jpeg" width="259" height="194" alt=""/></p>
+                    <p>Celebrate the flavors of summer at The Gallery Café with our Summer BBQ Extravaganza! Join us for an afternoon of sizzling grills, refreshing drinks, and live music. Indulge in an array of grilled specialties, from juicy steaks to gourmet burgers, perfectly paired with our handcrafted cocktails and mocktails.</p>
+                    <p><strong>Featured Dishes:</strong></p>
+                    <ul>
+                        <li><strong>Grilled Steak</strong>: Tender Angus beef, marinated to perfection and grilled to your liking. Served with roasted vegetables and garlic mashed potatoes.</li>
+                        <li><strong>BBQ Burger</strong>: A succulent beef patty topped with smoked cheddar, crispy bacon, caramelized onions, and tangy BBQ sauce on a toasted brioche bun.</li>
+                    </ul>
+                    <h3>&nbsp;</h3>
+                </center>
+            </div>
+
+            <!-- Add more past events as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Gallery Café. All rights reserved.</p>
+    </footer>
+</body>
+</html>

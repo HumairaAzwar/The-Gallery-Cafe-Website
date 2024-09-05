@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - The Gallery Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "gallery_cafe";
+
+$error_message = '';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Query to check if the user exists
+    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        session_start();
+        $_SESSION['username'] = $username;
+        $_SESSION['role'] = $row['role']; // Ensure 'role' is in your database schema
+
+        // Redirect to respective dashboard based on user type
+        if ($row['role'] == 'Admin') {
+            header("Location: admin.html");
+            exit();
+        } elseif ($row['role'] == 'Staff') {
+            header("Location: staff.html");
+            exit();
+        } elseif ($row['role'] == 'Customer') {
+            header("Location: customer.html");
+            exit();
+        } else {
+            $error_message = "Unknown user type.";
+        }
+    } else {
+        $error_message = "Login failed. Invalid username or password.";
+    }
+
+    $conn->close();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - The Gallery Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your existing CSS */
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 1em;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.php">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="promotions.html">Promotions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="login-form">
+            <h2>Log In</h2>
+
+            <!-- Display error message if it exists -->
+            <?php if (!empty($error_message)): ?>
+                <div class="error-message"><?php echo htmlspecialchars($error_message); ?></div>
+            <?php endif; ?>
+
+            <form action="login.php" method="POST">
+                <p>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </p>
+                <button type="submit">Log In</button>
+            </form>
+            <p>New user? <a href="signup.html">Sign Up here</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Gallery Café. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.php">Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="promotions.html">Promotions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="login-form">
+            <h2>Log In</h2>
+
+            <!-- Display error message if it exists -->
+            <?php
+            session_start();
+            if (isset($_SESSION['error_message'])) {
+                echo '<div class="error-message">' . htmlspecialchars($_SESSION['error_message']) . '</div>';
+                unset($_SESSION['error_message']); // Clear the error message after displaying it
+            }
+            ?>
+
+            <form action="login.php" method="POST">
+                <p>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </p>
+                <button type="submit">Log In</button>
+            </form>
+            <p>New user? <a href="signup.html">Sign Up here</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Gallery Café. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - The Gallery Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f4f4; 
+            color: #333; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-image: url("../images/header1.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 74px;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #8B4513; /* Wood-like color */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #D2B48C; /* Highlight color on hover */
+            color: #333;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        section {
+            background-color: #FFF7E1;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        footer  {
+			backgroung-color: #
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+		
+		.dashboard-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+   .stat {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    }
+
+
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <nav>
+        <ul>
+            <li><a href="manage_users.php">Manage Users</a></li>
+            <li><a href="manage_menu.php">Manage Menu</a></li>
+            <li><a href="process_reservation.php">Manage Reservations</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav>
+
+   <main>
+    <section>
+        <h2>Dashboard Overview</h2>
+        <div class="dashboard-stats">
+            <div class="stat">
+                <h3>Total Reservations</h3>
+                <p>150</p>
+            </div>
+            <div class="stat">
+                <h3>Current Users</h3>
+                <p>200</p>
+            </div>
+            <div class="stat">
+                <h3>Recent Sales</h3>
+                <p>$3,500</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+    <footer>
+        <p>&copy; 2024 The Gallery Café. All rights reserved.</p>
+    </footer>
+</body>
+</html>
